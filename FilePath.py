@@ -38,9 +38,7 @@ def getEndOfFile(sFilename):
         occurrences = [m.start() for m in re.finditer("\.", sFilename)]
         return sFilename[occurrences[-1] + 1 :]
     except:
-        pass
-
-    return ""
+        return ""
 
 
 assert getPathPart("log/cups/access_log") == "log/cups/"
