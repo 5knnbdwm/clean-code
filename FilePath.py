@@ -2,7 +2,7 @@ import re
 
 # log/cups/
 def getPathPart(sFilename):
-    if len(sFilename) > 0 and sFilename[len(sFilename) - 1] == "/":
+    if len(sFilename) > 0 and sFilename[:-1] == "/":
         return sFilename
 
     try:
