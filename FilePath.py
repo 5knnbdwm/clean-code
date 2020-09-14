@@ -6,14 +6,14 @@ def getPathPart(sFilename):
         return sFilename
 
     try:
-        # integer is index where the last slash is found
-        integer = int(sFilename.rindex("/"))
+        # intIndex is index where the last slash is found
+        intIndex = int(sFilename.rindex("/"))
     except:
-        integer = -1
+        intIndex = -1
 
     dirName = ""
-    if integer >= 0:
-        dirName = sFilename[0 : integer + 1]
+    if intIndex >= 0:
+        dirName = sFilename[0 : intIndex + 1]
     else:
         dirName = ""
 
@@ -28,8 +28,8 @@ def getFilenamePart(sFilename):
         return sFilename
 
     pos = sFilename.rindex("/")
-    base_name = sFilename[pos + 1 :]
-    return base_name
+    baseName = sFilename[pos + 1 :]
+    return baseName
 
 
 # png
