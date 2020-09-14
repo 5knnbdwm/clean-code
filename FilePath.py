@@ -2,7 +2,7 @@ import re
 import random
 
 # log/cups/
-def get_path_part(sFilename):
+def getPathPart(sFilename):
     if len(sFilename) > 0 and sFilename[len(sFilename) - 1] == "/":
         return sFilename
 
@@ -44,10 +44,10 @@ def getEndOfFile(sFilename):
     return ""
 
 
-assert get_path_part("log/cups/access_log") == "log/cups/"
-assert get_path_part("log/cups/") == "log/cups/"
-assert get_path_part("cups/access_log") == "cups/"
-assert get_path_part("access_log") == ""
+assert getPathPart("log/cups/access_log") == "log/cups/"
+assert getPathPart("log/cups/") == "log/cups/"
+assert getPathPart("cups/access_log") == "cups/"
+assert getPathPart("access_log") == ""
 assert getFilenamePart("log/cups/access_log") == "access_log"
 assert getFilenamePart("log/cups/") == ""
 assert getFilenamePart("cups/access_log") == "access_log"
