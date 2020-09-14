@@ -32,7 +32,7 @@ def getFilenamePart(sFilename):
     return base_name
 
 
-# .png
+# png
 def getEndOfFile(sFilename):
     try:
         occurrences = [m.start() for m in re.finditer("\.", sFilename)]
